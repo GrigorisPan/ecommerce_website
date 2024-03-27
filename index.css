@@ -8,7 +8,6 @@
   body {
     @apply font-poppins;
   }
-  ,
   h1,
   h2,
   h3,
@@ -16,5 +15,11 @@
   h5,
   h6 {
     @apply font-roboto;
+  }
+}
+
+@layer components {
+  .input-box {
+    @apply block w-full border border-gray-300 px-2 py-2 text-sm rounded placeholder-gray-400 focus:border-primary focus:ring-0;
   }
 }

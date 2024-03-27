@@ -1,18 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Breadcrums = ({ mainCategory, subCategory }) => {
+const Breadcrums = ({ page, mainCategory, subCategory }) => {
   return (
     <div className='lg:container py-4 flex items-center gap-3'>
       <Link to='/' className='text-primary text-base'>
         <i className='fas fa-home' />
       </Link>
-      <span className='text-xs text-secondary'>
-        <i className='fas fa-chevron-right'></i>
-      </span>
-      <Link to={`/shop`}>
-        <p className='text-gray-500'>shop</p>
-      </Link>
+      {page && (
+        <>
+          <span className='text-xs text-secondary'>
+            <i className='fas fa-chevron-right'></i>
+          </span>
+          <Link to={`/${page}`}>
+            <p className='text-gray-500 capitalize'>{page}</p>
+          </Link>
+        </>
+      )}
+
       {mainCategory && (
         <>
           <span className='text-xs text-secondary'>

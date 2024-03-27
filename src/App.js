@@ -6,7 +6,10 @@ import Shop from './pages/Shop';
 import ProductInfo from './pages/ProductInfo';
 import Register from './pages/Register';
 import Login from './pages/Login';
-
+import Account from './pages/Account';
+import Checkout from './pages/Checkout';
+import ProfileInfo from './pages/ProfileInfo';
+import Whishlist from './pages/Wishlist';
 function App() {
   const route = () => {
     return (
@@ -15,6 +18,10 @@ function App() {
         <Routes>
           <Route path='/' exact element={<Home />} />
           <Route path='/shop' exact element={<Shop />} />
+          <Route path='/account' exact element={<Account />} />
+          <Route path='/account/profile_info' exact element={<ProfileInfo />} />
+          <Route path='/checkout' exact element={<Checkout />} />
+          <Route path='/account/whishlist' exact element={<Whishlist />} />
           <Route path='/product/:productSlug' exact element={<ProductInfo />} />
           <Route path='/login' exact element={<Login />} />
           <Route path='/register' exact element={<Register />} />

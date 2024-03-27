@@ -8,6 +8,7 @@ const Shop = () => {
   return (
     <div className='px-2 min-w-[270px]'>
       <Breadcrums
+        page={'shop'}
         mainCategory={'Computers & Accessories'}
         subCategory={'All In One'}
       />
